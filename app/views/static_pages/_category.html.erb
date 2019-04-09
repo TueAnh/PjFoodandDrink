@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">Bu Bu Online</h1>
+        <div class="list-group">
+          <li class="list-group-item"><%= link_to "Food", root_path%></li>
+
+          <a href="#" class="list-group-item">Drink</a>
+        </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+      <div class="col-lg-9">
+       <div class="row">
+          <%= render "products/product"%>
+        </div>
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>

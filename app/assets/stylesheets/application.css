@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require "stylesheets/bootstrap.css"
+ *= require "stylesheets/bootstrap.min.css"
  */

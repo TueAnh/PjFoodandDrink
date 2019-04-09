@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'products/show'
+
 	root "static_pages#home"
-	
+
   devise_for :users
+  resources :products
+  resources :categories
   resources :users, :only => [:show]
    as :user do
     get "signin" => "devise/sessions#new"
