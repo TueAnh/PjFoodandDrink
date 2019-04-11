@@ -26,4 +26,14 @@ Rails.application.routes.draw do
     resources :users, only: %i(index destroy)
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :admin do
+    root "static_pages#index"
+    resources :categories
+    resources :products
+    resources :suggests, only: %i(index destroy update)
+    resources :orders, only: %i(index update) do
+      resources :order_items, only: :index
+    end
+    resources :users#, only: %i(index destroy)
+  end
 end

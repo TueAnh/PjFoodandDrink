@@ -1,0 +1,26 @@
+<p1>Manage users</p1>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><%= t ".name" %></th>
+                  <th><%= t ".address" %></th>
+                  <th><%= t ".phone" %></th>
+                  <th><%= t ".email" %></th>
+                  <th><%= t ".function" %></th>
+                </tr>
+              </thead>
+              <tbody id="list-users">
+                <%= render @users%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <%= link_to "Back", admin_root_path %>
+      <%= link_to "Add", new_admin_user_path %>
+    </div>
+</div>
