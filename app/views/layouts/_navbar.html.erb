@@ -10,7 +10,26 @@
                       <span class="hidden-xs"><%= t ".my_account" %></span>
                     <% end %>
                   </div>
-
+                  <div class="login">
+                    <%= link_to orders_path do %>
+                      <i class="fa fa-history"></i>
+                      <span class="hidden-xs" ><%= t ".history_order" %></span>
+                    <% end %>
+                  </div>
+                  <div class="login">
+                    <%= link_to suggests_path do %>
+                      <i class="fa fa-history"></i>
+                      <span class="hidden-xs" ><%= t ".history_suggests" %></span>
+                    <% end %>
+                  </div>
+                  <% if current_user.role == 1 %>
+                    <div class="login">
+                      <%= link_to admin_root_path do %>
+                        <i class="fa fa-tachometer"></i>
+                        <span class="hidden-xs"><%= t ".dashboard_admin" %></span>
+                      <% end  %>
+                    </div>
+                  <% end %>
                   <div class="login">
                     <%= link_to signout_path, method: :delete do %>
                       <span class="glyphicon glyphicon-log-out"></span>

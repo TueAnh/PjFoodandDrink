@@ -6,16 +6,16 @@
 
         <h1 class="my-4">Bu Bu Online</h1>
         <div class="list-group">
-          <li class="list-group-item"><%= link_to "Food", root_path%></li>
+          <li class="list-group-item"><%= link_to "Food", products_path(:category_id => "1")%></li>
 
-          <a href="#" class="list-group-item">Drink</a>
+          <li class="list-group-item"><%= link_to "Drink", products_path(:category_id => "2")%></li>
         </div>
 
       </div>
       <!-- /.col-lg-3 -->
       <div class="col-lg-9">
        <div class="row">
-          <%= render "products/product"%>
+          <%= render @products%>
         </div>
       </div>
       <!-- /.col-lg-9 -->
