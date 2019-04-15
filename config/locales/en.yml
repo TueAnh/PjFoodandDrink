@@ -1,33 +1,302 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  flash:
+    create_success: "Add success"
+    create_fail: "Add failed"
+    delete_success: "Delete success"
+    update_fail: "Update Fail"
+    update_success: "Update Success"
+    suggested_fail: "Suggested fail"
+  please_log_in: "Please login"
+  layouts:
+    application:
+      base_title: "Foods And Drinks"
+    header:
+      wellcome_msg: "Welcome to Bu Bu Online!"
+      call_us: "Call Us: +123.456.789"
+      my_account: "My Account"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      log_out: "Log out"
+      logo: "Logo"
+      recently_added_item: "Recently added item(s)"
+      cart: "Cart"
+      items: "%{item} Item(s)"
+      subtotal: "Subtotal: "
+      price: "$ %{price}"
+      checkout: "Checkout"
+      view_cart: "View Cart"
+      history_order: "History orders"
+      dashboard_admin: "Dashboard Admin"
+      search_place_holder: "Search name of product"
+    mobile_menu:
+      home: "Home"
+      suggest: "Suggest"
+      categories: "Categories"
+    navbar:
+      categories: "Categories"
+      shop_by_category: "Shop Foods And Drinks"
+      home: "Home"
+      suggest: "Suggest"
+      search: "Search"
+      items: "%{item} Item(s)"
+    footer:
+      design_by: "Design by DT"
+    application_admin:
+      base_title: "Foods And Drinks"
+  static_pages:
+    home:
+      home_title: "Home"
+  users:
+    show:
+      my_profile: "My Profile"
+      update: "Update"
+  static_pages:
+    category_area:
+      food_category: "Food"
+      drink_category: "Drink"
+      no_item: "No item"
+  products:
+    product:
+      price_label: "Price"
+      price: "$ %{price}"
+      add_to_cart: "Add to Cart"
+    show:
+      notfoud: "Not found"
+  orders:
+    create:
+      order_success: "Order Success"
+      order_failed: "Order Failed"
+    destroy:
+      delete_success: "Delete Success"
+      delete_failed: "Delete Failed"
+    not_found_order: "Not found order"
+    show:
+      detail_label: "Detail"
+    order:
+      total_price: "$ %{price}"
+    index:
+      history_orders: "History orders"
+      no_label: "No."
+      ordered_date_label: "Ordered date"
+      status: "Status"
+      function: "Function"
+  order_details:
+    order_detail:
+      price: "$ %{price}"
+    show:
+      image_label: "Image"
+      product_name_label: "Product Name"
+      unit_price_label: "Unit Price"
+    index:
+      manage_order_details: "Manager Order detail"
+      list_order_detail: "List order detail"
+    list_order_detail:
+      no_order: "No."
+      picture: "Picture"
+      name: "Product Name"
+      unit_price: "Unit price"
+      quantity: "Quanity"
+      total: "Total"
+      total_price: "$ %{price}"
+  carts:
+    shopping_title: "Shopping cart"
+    shopping_cart:
+      product: "Product"
+      name: "Name"
+      price: "Price"
+      checkout: "Checkout"
+      quantity: "Quantity"
+      total_label: "Total"
+      function: "Function"
+      total: "$ %{price}"
+    order_cart:
+      apply: "Apply"
+      you_sure: "You sure?"
+    create:
+      success_add: "Added success"
+    destroy:
+      success_delete: "Deleted sucess"
+  suggests:
+    index:
+      my_suggests: "My suggests"
+      history_suggests: "History suggests"
+      index: "No."
+      picture: "Picture"
+      name: "Name"
+      describe: "Describe"
+      price: "price"
+      status: "status"
+      function: "function"
+    new:
+      suggest: "Suggests"
+      suggest_us: "Suggests for Us"
+      write_suggest: "Write a suggest"
+      send_suggest: "Send Suggest"
+    create:
+      suggest_success: "Suggested success"
+      suggest_fail: "Suggested fail"
+    destroy:
+      delete_success: "Deleted sucess"
+    edit:
+      update_suggest: "Update Suggest"
+      update: "Update"
+    update:
+      success: "Update Success"
+      failed: "Update Fail"
+  filters:
+    search_title: "Search"
+    show:
+      products: "Products"
+      shop_by: "Shop By"
+      food: "Foods"
+      drink: "Drinks"
+      price: "Price"
+      min_price: "Min price"
+      max_price: "Max price"
+      search: "Search"
+      all_product: "All product"
+  admin:
+    layouts:
+      dashboard: "Dashboard"
+      manage_users: "Manage Users"
+      manage_categories: "Manage Categories"
+      manage_products: "Manage Products"
+      manage_orders: "Manage Orders"
+      manage_suggests: "Manage Suggests"
+      navbar:
+        admin_header: "Admin Page"
+        back_to_public_page: "Back to public page"
+        logout: "Logout"
+        import_products: "Import Products"
+    static_pages:
+      index:
+        dashboard_admin_title: "Dashboard Admin"
+        goto: "Go to"
+    categories:
+      category:
+        you_sure: "Are you sure?"
+      not_found: "Not found category"
+      can_not_delete: "Can not delete category, because the product exists"
+      index:
+        index: "No."
+        name: "Name"
+        quantity: "Quantity"
+        function: "Function"
+        manage_categories: "Manage categories"
+        list_category: "List category"
+        add_new: "Add new"
+      destroy:
+        success: "Delete success"
+        failed: "Delete failed"
+      edit:
+        update_category: "Update Category"
+      update:
+        success: "Update Success"
+        failed: "Update Fail"
+      new:
+        new_category: "New Category"
+      create:
+        success: "Add success"
+        failed: "Add failed"
+      category_form:
+        placeholder: "Input category name"
+        button_submit: "Save"
+    products:
+      not_found_product: "Not found product"
+      can_not_delete: "Can not delete category, because the order exists"
+      product:
+        you_sure: "Are you sure?"
+      index:
+        index: "No."
+        picture: "Picture"
+        name: "Name"
+        quantity: "Quantity"
+        price: "Price"
+        category_id: "Category"
+        function: "Function"
+        manage_products: "Manage Products"
+        list_product: "List product"
+        add_new: "Add new"
+      destroy:
+        success: "Delete success"
+        failed: "Delete failed"
+      edit:
+        update_product: "Update Products"
+      update:
+        success: "Update Success"
+        failed: "Update Fail"
+      new:
+        new_product: "New Product"
+      create:
+        success: "Add success"
+        failed: "Add failed"
+      product_form:
+        name_placeholder: "Input product name"
+        detail_placeholder: "Input product detail"
+        price_placeholder: "Input product price"
+        quality_placeholder: "Input product quality"
+        category: "Category"
+        button_submit: "Save"
+    suggests:
+      can_not_delete: "Can not delete suggest"
+      not_found_category: "Not found suggest"
+      index:
+        index: "No."
+        username: "Customer name"
+        picture: "Picture"
+        name: "Name"
+        describe: "Describe"
+        status: "Status"
+        price: "Price"
+        function: "Function"
+        manage_suggests: "Manage suggests"
+        list_suggest: "List suggest"
+        status_search: "status"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+        confirm: "Are you sure?"
+      update:
+        success: "Change success"
+        failed: "Update Fail"
+    order_details:
+      index:
+        manage_order_details: "Manager Order detail"
+        list_order_detail: "List order detail"
+        no_order: "No."
+        picture: "Picture"
+        name: "Product Name"
+        unit_price: "Unit price"
+        quantity: "Quanity"
+        total: "Total"
+        total_price: "$ %{price}"
+    orders:
+      index:
+        manage_orders: "Manage orders"
+        list_order: "List order"
+        index: "No."
+        user_email: "Customer email"
+        user_name: "Customer"
+        total: "Total"
+        status: "Status"
+        function: "Function"
+        search: "status"
+    users:
+      not_found_user: "Not found user"
+      index:
+        manage_users: "Manage users"
+        list_user: "List user"
+        index: "No."
+        name: "Name"
+        gender: "Gender"
+        address: "Address"
+        phone: "Phone"
+        email: "Email"
+        actived: "Activated"
+        name_email: "name,email"
+        function: "Function"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+      user:
+        you_sure: "You sure"

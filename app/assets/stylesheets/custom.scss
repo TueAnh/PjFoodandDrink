@@ -1,7 +1,10 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import 'font-awesome-sprockets.css';
 @import 'font-awesome.css';
+.navbar-inverse {
+    background-color: #497096
+
 
 /* mixins, variables, etc. */
 
@@ -114,3 +117,6 @@ footer {
   .rejected_status {
    color: red;
   }
+
+}
+

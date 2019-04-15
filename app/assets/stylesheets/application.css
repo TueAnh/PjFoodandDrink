@@ -14,4 +14,7 @@
  *= require_self
  *= require "stylesheets/bootstrap.css"
  *= require "stylesheets/bootstrap.min.css"
+ *= require "stylesheets/style.css"
  */
+@import 'font-awesome-sprockets.css';
+@import 'font-awesome.css';

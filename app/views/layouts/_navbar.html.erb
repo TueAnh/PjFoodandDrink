@@ -1,60 +1,24 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "Food and Drink", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-                  <div class="login">
-                    <%= link_to current_user do %>
-                      <span class="glyphicon glyphicon-user"></span>
-                      <span class="hidden-xs"><%= t ".my_account" %></span>
-                    <% end %>
+<header class="navbar navbar-fixed-top navbar-inverse">  
+    <div class="container">
+      <div class="logo">
+            <%= link_to root_path do %>
+              <%= image_tag("logo.png")%>
+            <% end %>
+          </div>
+    <div class="top-cart-contain">
+            <div class="mini-cart">
+              <div class="basket dropdown-toggle">
+                <%= link_to cart_path do %>
+                  <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+                  <div class="shoppingcart-inner hidden-xs">
+                    <span class="cart-title"><%= t ".cart" %></span>
+                    <span class="cart-total"><%= t ".items", item: current_order.size %></span>
                   </div>
-                  <div class="login">
-                    <%= link_to orders_path do %>
-                      <i class="fa fa-history"></i>
-                      <span class="hidden-xs" ><%= t ".history_order" %></span>
-                    <% end %>
-                  </div>
-                  <div class="login">
-                    <%= link_to suggests_path do %>
-                      <i class="fa fa-history"></i>
-                      <span class="hidden-xs" ><%= t ".history_suggests" %></span>
-                    <% end %>
-                  </div>
-                  <% if current_user.role == 1 %>
-                    <div class="login">
-                      <%= link_to admin_root_path do %>
-                        <i class="fa fa-tachometer"></i>
-                        <span class="hidden-xs"><%= t ".dashboard_admin" %></span>
-                      <% end  %>
-                    </div>
-                  <% end %>
-                  <div class="login">
-                    <%= link_to signout_path, method: :delete do %>
-                      <span class="glyphicon glyphicon-log-out"></span>
-                      <span class="hidden-xs"><%= t ".log_out" %></span>
-                    <% end %>
-                  </div>
-              <% else %>
-                <div class="login">
-                  <%= link_to signin_path do %>
-                    <i class="fa fa-sign-in"></i>
-                    <span class="hidden-xs"><%= t ".sign_in" %></span>
-                  <% end %>
-                </div>
-                <div class="signup">
-                  <%= link_to signup_path do %>
-                    <i class="fa fa-user-plus"></i>
-                    <span class="hidden-xs"><%= t ".sign_up" %></span>
-                  <% end %>
-                </div>
-              <% end %>
-<!--         <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Sign up",  signup_path %></li>
-        <li><%= link_to "Sign in",  signin_path %></li>
-        <li><%= link_to "Sign out", signout_path, method: :delete %></li> -->
-      </ul>
-    </nav>
+                <% end %>
+              </div>
+            </div>
+    </div>
+
+    </div>
   </div>
 </header>
