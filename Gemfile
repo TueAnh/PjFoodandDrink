@@ -33,6 +33,7 @@ gem "ffaker"
 gem "faker"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 5.6.1"
+gem "config"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
