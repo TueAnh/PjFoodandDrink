@@ -1,0 +1,16 @@
+<% if suggest.status==1 %>  
+  <tr>
+    <td><%= suggest.user.name %></td>
+    <td><%= suggest.name %></td>
+    <td><%= suggest.price %></td>
+    <td><%= suggest.description %></td>
+    <td>
+        <%= link_to edit_admin_suggest_path(suggest) do %>
+          <i class="glyphicon glyphicon-ok"></i>
+        <% end %>
+        <%= link_to admin_suggest_path(suggest), method: :delete do %>
+          <i class="glyphicon glyphicon-remove"></i>
+        <% end %>
+    </td>
+  </tr>
+<% end %>
