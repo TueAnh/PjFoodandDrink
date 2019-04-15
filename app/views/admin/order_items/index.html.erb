@@ -1,4 +1,4 @@
-<p1>Manage Products</p1>
+<p1>Manage Order_Items</p1>
 
 <div class="row">
     <div class="col-lg-12">
@@ -7,22 +7,18 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th><%= t ".category" %></th>
                   <th><%= t ".name" %></th>
                   <th><%= t ".quantity" %></th>
-                  <th><%= t ".price" %></th>
-                  <th><%= t ".description" %></th>
-                  <th><%= t ".function" %></th>
+                  <th><%= t ".total" %></th>
                 </tr>
               </thead>
               <tbody id="list-products">
-                <%= render @products%>
+                <%= render @order_items %>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-      <%= link_to "Back", admin_root_path %>
-      <%= link_to "Add", new_admin_product_path %>
+      <%= link_to "Back", admin_orders_path %>
     </div>
 </div>

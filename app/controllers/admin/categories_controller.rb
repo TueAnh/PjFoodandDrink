@@ -1,3 +1,4 @@
+
 class Admin::CategoriesController < ApplicationController
   before_action :find_category , only: [:edit,:update,:destroy] 
 

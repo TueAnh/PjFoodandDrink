@@ -30,8 +30,8 @@ Rails.application.routes.draw do
     root "static_pages#index"
     resources :categories
     resources :products
-    resources :suggests, only: %i(index destroy update)
-    resources :orders, only: %i(index update) do
+    resources :suggests
+    resources :orders do
       resources :order_items, only: :index
     end
     resources :users#, only: %i(index destroy)
