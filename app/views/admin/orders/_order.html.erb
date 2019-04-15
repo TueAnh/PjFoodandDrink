@@ -3,11 +3,11 @@
     <td><%= order.user.name %></td>
     <td><%= order.date %></td>
     <td><%= order.total %></td>
-    <% if order.status==1 %>
+    <% if order.pending? %>
       <td class="pending_status" >
         <%= "pending...".capitalize %>    
       </td>
-    <% elsif order.status==2 %>
+    <% elsif order.accepted? %>
       <td class="accepted_status" >
         <%= "accepted".capitalize %>    
       </td>
@@ -20,7 +20,7 @@
         <%= link_to admin_order_order_items_path(order_id: order.id) do %>
           <i class="glyphicon glyphicon-search"></i>
         <% end %>
-      <% if order.status==1 %>
+      <% if order.pending? %>
         <%= link_to edit_admin_order_path(order) do %>
           <i class="glyphicon glyphicon-ok"></i>
         <% end %>

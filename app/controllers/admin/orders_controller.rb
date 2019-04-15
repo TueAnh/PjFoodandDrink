@@ -6,12 +6,12 @@ class Admin::OrdersController < ApplicationController
 	end
 
 	def destroy
-	  	@status = 3
+	  	@status = 2
 	  	update_status
 	end
 
 	def edit
-		@status = 2
+		@status = 1
 	  	update_status
 	end
 

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :suggests, dependent: :destroy
   has_many :orders, dependent: :destroy
-  has_many :ratings, dependent: :destroy
+  has_many :rates, dependent: :destroy
 
   def current_user? user
     user == self
