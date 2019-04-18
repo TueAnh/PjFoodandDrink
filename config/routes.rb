@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'messages/index'
+
+  get 'conversations/index'
+
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
+
+    resources :messages, only: [:create]
+  end
 	root "static_pages#home"
   devise_for :users
   resources :products, only: [:index, :show]
@@ -7,7 +18,7 @@ Rails.application.routes.draw do
   resources :users, :only => [:show]
   resources :suggests
   resources :orders do
-    resources :order_details
+    resources :order_items
   end
   get "/search", to: "filters#show"
   resource :cart

@@ -22,16 +22,16 @@
                     <% end %>
                   </div>
                   <div class="login">
-                    <%= link_to suggests_path do %>
-                      <i class="fa fa-history"></i>
-                      <span class="hidden-xs" ><%= t ".history_suggests" %></span>
+                    <%= link_to conversations_index_path do %>
+                      <i class="fa fa-wechat"></i>
+                      <span class="hidden-xs" ><%= t ".chat" %></span>
                     <% end %>
                   </div>
                   <% if current_user.role == 1 %>
                     <div class="login">
                       <%= link_to admin_root_path do %>
                         <i class="fa fa-tachometer"></i>
-                        <span class="hidden-xs"><%= t ".dashboard_admin" %></span>
+                        <span class="hidden-xs"><%= t ".admin" %></span>
                       <% end  %>
                     </div>
                   <% end %>
