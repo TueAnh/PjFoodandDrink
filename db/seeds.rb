@@ -20,3 +20,12 @@
 # OrderItem.create!(order_id: 1, product_id: 1, quantity: 3)
 User.create!(name: "BuBu", email: "bubu1@gmail.com",
   password: "bubu123", password_confirmation: "bubu123", role: 1)
+
+password = 'pass123'
+1.upto(5) do |i|
+  User.create(
+    email: "user-#{i}@example.com",
+    password: password,
+    password_confirmation: password
+  )
+end
