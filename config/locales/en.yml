@@ -25,9 +25,10 @@ en:
       price: "$ %{price}"
       checkout: "Checkout"
       view_cart: "View Cart"
-      history_order: "History orders"
-      dashboard_admin: "Dashboard Admin"
+      history_order: "History Orders"
+      admin: "Admin"
       search_place_holder: "Search name of product"
+      chat: "Chat"
     mobile_menu:
       home: "Home"
       suggest: "Suggest"
