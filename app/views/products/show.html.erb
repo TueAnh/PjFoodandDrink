@@ -20,3 +20,44 @@
               </div>
     </div>
 </div>
+
+
+<div class="row">
+
+  <div class="col-md-4">
+
+    <div class="reviews">
+
+      <!-- Where the reviews/ratings will go -->
+      <h1>Reviews</h1>
+      <%= render @product.reviews %>
+
+      <div>
+        <%= link_to "Add Review", new_product_review_path(@product), class: "btn-custom" %>
+      </div>
+
+    </div>  
+
+  </div>
+
+</div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+<!-- <script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script> -->
