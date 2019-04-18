@@ -34,7 +34,6 @@ gem "faker"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 5.6.1"
 gem "config"
-gem "jquery-rails", "~> 4.3", ">= 4.3.3"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
