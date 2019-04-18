@@ -3,8 +3,12 @@
 	<%= form_for @user, url: admin_user_path(@user), method: :patch do |f| %>
 		<%= f.label :name%>
 		<%= f.text_field :name, class: 'form-control'%>
-		<%= f.label :email %>
+	    <%= f.label :email %>
 	    <%= f.email_field :email, class: 'form-control' %>
+	    <%= f.label :phone %>
+	    <%= f.text_field :phone, class: 'form-control' %>
+	    <%= f.label :address %>
+	    <%= f.text_field :address, class: 'form-control' %>
 	    <%= f.label :password %>
 	    <% if @minimum_password_length %>
 	    <em>(<%= @minimum_password_length %> characters minimum)</em>

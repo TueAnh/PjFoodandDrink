@@ -34,6 +34,8 @@ gem "faker"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 5.6.1"
 gem "config"
+gem 'carrierwave'
+gem 'mini_magick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
