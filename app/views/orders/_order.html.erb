@@ -4,7 +4,7 @@
     <td class="th-details"><%= order.created_at %></td>
     <td class="th-details"><%= order.status %></td>
     <th>
-      <%= link_to order_order_details_path(order_id: order.id) do %>
+      <%= link_to order_order_items_path(order_id: order.id) do %>
         <i class="fa fa-info"></i>
       <% end %>
       <% if order.pending?%>

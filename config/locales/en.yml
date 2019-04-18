@@ -39,6 +39,7 @@ en:
       suggest: "Suggest"
       search: "Search"
       items: "%{item} Item(s)"
+      search_place_holder: "Enter name of product"
     footer:
       design_by: "Design by DT"
     application_admin:
@@ -62,6 +63,8 @@ en:
       add_to_cart: "Add to Cart"
     show:
       notfoud: "Not found"
+    index:
+      add_to_cart: "Add to Cart"
   orders:
     create:
       order_success: "Order Success"

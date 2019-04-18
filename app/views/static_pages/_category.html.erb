@@ -4,11 +4,11 @@
 
       <div class="col-lg-3">
 
-        <h1 class="my-4">Bu Bu Online</h1>
+        <h1 class="my-4">Category</h1>
         <div class="list-group">
-          <li class="list-group-item"><%= link_to "Food", products_path(:category_id => "1")%></li>
-
-          <li class="list-group-item"><%= link_to "Drink", products_path(:category_id => "2")%></li>
+          <% @categories.each do |category| %>
+          <li class="list-group-item"><%= link_to category.name, products_path(:category_id => category.id)%></li>
+          <%end%>
         </div>
 
       </div>
