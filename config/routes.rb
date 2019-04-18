@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, :only => [:show]
   resources :suggests
   resources :orders do
-    resources :order_details
+    resources :order_items
   end
   get "/search", to: "filters#show"
   resource :cart

@@ -11,6 +11,7 @@ class CartsController < ApplicationController
 
   def create
     order_item = OrderItem.new item_params
+    #p Product.find_by(order_item.product_id).price
     result = find_product_in_cart(order_item.product_id)
     if order_item.quantity.nil? || order_item.quantity <= 0
       respond_to do |format|
@@ -25,6 +26,7 @@ class CartsController < ApplicationController
       end
     end
     p order_item
+    order_item.price =  (Product.find_by id: order_item.product_id).price
   end
 
 
@@ -50,7 +52,7 @@ class CartsController < ApplicationController
   private
 
   def item_params
-    params.permit :product_id, :quantity
+    params.permit :product_id, :quantity, :price
   end
 
   def load_product

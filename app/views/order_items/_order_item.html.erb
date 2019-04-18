@@ -1,0 +1,10 @@
+<% @order_items.each_with_index do |order_item, index| %>
+  <tr>
+    <td><%= create_index params[:page], index, Settings.suggests.paginate.per_page %></td>
+
+    <td><%= link_to order_item.product_name, order_item.product %></td>
+    <td><%= order_item.price %></td>
+    <td><%= order_item.quantity %></td>
+    <td><%= calc_price order_item.price, order_item.quantity %></td>
+  </tr>
+<% end %>
