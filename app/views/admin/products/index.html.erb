@@ -9,6 +9,7 @@
                 <tr>
                   <th><%= t ".category" %></th>
                   <th><%= t ".name" %></th>
+                  <th><%= t ".image" %></th>
                   <th><%= t ".quantity" %></th>
                   <th><%= t ".price" %></th>
                   <th><%= t ".description" %></th>
@@ -26,3 +27,9 @@
       <%= link_to "Add", new_admin_product_path %>
     </div>
 </div>
+<style type="text/css">
+  .image img{
+    width: 200px;
+    height: 200px;
+  }
+</style>
