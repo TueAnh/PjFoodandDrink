@@ -1,7 +1,11 @@
 <% provide :title, @product.name %>
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://m.tienganh123.com/file/tienganhcoban/bai8/vocabulary/hinh%20minh%20hoa..jpg" alt=""></a>
+              <%if @product.image.present? %>
+                <td class="image"><%= image_tag @product.image_url.to_s %></td>
+              <%else%>
+                <td class="image"><%= image_tag("default.jpeg")%></td>
+              <%end%>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><%= @product.name %></a>
@@ -15,16 +19,12 @@
                   <span><%= t ".add_to_cart" %></span>
                   <% end %>
              </button>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
+                <div class="review-rating" data-score="<%= @rating %>"></div>
     </div>
 </div>
 
 
-<div>
-    <%= link_to "Add Review", new_product_review_path(@product), class: "btn-custom" %>
-</div>
+
 
 <div class="row">
 
@@ -41,7 +41,9 @@
   </div>
 
 </div>
-
+<div>
+    <%= link_to "Add Review", new_product_review_path(@product), class: "btn-custom" %>
+</div>
 <script>
   $('.review-rating').raty({
     readOnly: true,

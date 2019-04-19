@@ -9,6 +9,14 @@ class ProductsController < ApplicationController
 
   def show
   	@product = Product.find_by id: params[:id]
+    @reviews = Review.all.for_product(@product.id)
+    @rating = 0
+    @reviews.each do |review|
+      @rating += review.rating
+    end
+    if @reviews.length > 0
+      @rating = @rating/@reviews.length
+    end
     return if @product
     redirect_to root_url
    #  return if @product
