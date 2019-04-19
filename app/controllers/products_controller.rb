@@ -12,7 +12,9 @@ class ProductsController < ApplicationController
     @reviews = Review.all.for_product(@product.id)
     @rating = 0
     @reviews.each do |review|
-      @rating += review.rating
+      if review.rating 
+        @rating += review.rating
+      end
     end
     if @reviews.length > 0
       @rating = @rating/@reviews.length
