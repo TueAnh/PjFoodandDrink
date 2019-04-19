@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
 		@review.user_id = current_user.id
 
 		if @review.save
+			flash[:sucess] = "Comment added"
 			redirect_to product_path(@product)
 		else
 			render 'new'
@@ -38,7 +39,7 @@ class ReviewsController < ApplicationController
 	private
 
 		def review_params
-			params.require(:review).permit(:rating, :comment)
+			params.require(:review).permit(:rating, :comment, :user_id , :product_id)
 		end
 
 		def find_product

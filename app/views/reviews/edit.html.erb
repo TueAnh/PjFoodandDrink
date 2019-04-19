@@ -5,9 +5,7 @@
 		<h1>Edit Review</h1>
 
 		<%= simple_form_for([@product, @review]) do |f| %>
-			<div id="rating-form">
-				<label>Rating</label>
-			</div>
+			<div id="rating-form">Rating </div>
 			<%= f.input :comment %>
 			<%= f.button :submit, :class => "btn-custom2" %>
 		<% end %>	
