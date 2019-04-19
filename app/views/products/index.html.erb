@@ -1,4 +1,4 @@
-<div class="col-lg-3">
+sa<div class="col-lg-3">
         <div class="list-group">
             <h1 class="my-4"></h1>
         </div>
@@ -10,7 +10,7 @@
 <% @products.each do |product| %>
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card h-100">
-              <%if product.image.present? %>
+              <%if product.image_url.present? %>
                 <td class="image"><%= image_tag product.image_url.to_s %></td>
               <%else%>
                 <td class="image"><%= image_tag("default.jpeg")%></td>
