@@ -7,13 +7,15 @@
 		<br></br>
 		<%= f.label :name%>
 		<%= f.text_field :name, class: 'form-control'%>
+		<%= f.label :image%>
+		<%= f.file_field :image%>
 		<%= f.label :price%>
 		<%= f.text_field :price, class: 'form-control'%>
 		<%= f.label :quantity%>
 		<%= f.text_field :quantity, class: 'form-control'%>
 		<%= f.label :description%>
 		<%= f.text_field :description, class: 'form-control'%>
-	    <%= f.submit "Update",class: "btn btn-primary"%>
+	    <%= f.submit "Accept",class: "btn btn-primary"%>
 	<% end %>
   </div>
 </div>

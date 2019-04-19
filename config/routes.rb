@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
   resources :categories
   resources :users, :only => [:show]
-  resources :suggests
+  resources :suggests, :only => [ :new , :create]
   resources :orders do
     resources :order_items
   end

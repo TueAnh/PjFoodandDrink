@@ -1,5 +1,5 @@
 class Admin::OrdersController < ApplicationController
-	before_action :find_suggest , only: [:destroy,:update,:edit]
+	before_action :find_suggest , only: [:destroy,:edit]
 
 	def index
 		@orders = Order.all.order(status: :ASC)
@@ -22,9 +22,9 @@ class Admin::OrdersController < ApplicationController
 
 	  	def update_status
 	  		if @order.update_attribute(:status,@status)
-		        flash[:success] = t ".success"
+		        flash[:success] = "success"
 		    else
-		        flash[:danger] = t ".failed"
+		        flash[:danger] = "failed"
 		    end
 		    redirect_to admin_orders_path
 	  	end
