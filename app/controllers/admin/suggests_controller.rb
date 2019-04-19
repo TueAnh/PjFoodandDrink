@@ -3,11 +3,11 @@ class Admin::SuggestsController < ApplicationController
 
 
   def index
-  	@suggests = Suggest.all
+  	@suggests = Suggest.all.order(status: :ASC)
   end
 
   def destroy
-  	@status = 3
+  	@status = 2
   	if @suggest.present?
   		update_status
   	else
@@ -23,7 +23,7 @@ class Admin::SuggestsController < ApplicationController
   end
 
   def update
-  	@status = 2
+  	@status = 1
   	@product = Product.new(product_params)
   	if @product.save
   		update_status
@@ -39,14 +39,14 @@ class Admin::SuggestsController < ApplicationController
   	end
 
   	def product_params
-  		params.require(:product).permit(:category_id,:name,:price,:quantity,:description)
+  		params.require(:product).permit(:category_id,:name,:image,:price,:quantity,:description)
   	end
 
   	def update_status
       if @suggest.update_attribute(:status,@status)
-        flash[:success] = t ".success"
+        flash[:success] = "success"
       else
-        flash[:danger] = t ".failed"
+        flash[:danger] = "failed"
       end
   	end
 

@@ -21,6 +21,14 @@
                       <span class="hidden-xs" ><%= t ".history_order" %></span>
                     <% end %>
                   </div>
+                  <% if current_user.role != 1 %>
+                    <div class="login">
+                      <%= link_to new_suggest_path do %>
+                        <i class="fa fa-history"></i>
+                        <span class="hidden-xs" ><%= t ".suggest" %></span>
+                      <% end %>
+                    </div>
+                  <% end %>  
                   <div class="login">
                     <%= link_to conversations_index_path do %>
                       <i class="fa fa-wechat"></i>
