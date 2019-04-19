@@ -14,4 +14,9 @@ class ProductsController < ApplicationController
    #  return if @product
    #  redirect_to root_url
   end
+  private
+
+    def find_product
+      @product = Product.find(params[:id])
+    end
 end

@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   end
 	root "static_pages#home"
   devise_for :users
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index, :show] do
+    resources :reviews
+  end
   resources :categories
   resources :users, :only => [:show]
   resources :suggests
