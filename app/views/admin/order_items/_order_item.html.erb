@@ -1,7 +1,7 @@
 
   <tr> 
     <td><%= order_item.product.name %></td>
-    <td class="image"><%= image_tag product.image_url.to_s %></td>
+    <td class="image"><%= image_tag order_item.product.image_url.to_s %></td>
     <td><%= order_item.quantity %></td>
-    <td><%= order_item.price %></td>
+    <td><%= order_item.price*order_item.quantity %></td>
   </tr>

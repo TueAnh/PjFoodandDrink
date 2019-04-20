@@ -1,7 +1,7 @@
 
   <tr> 
     <td><%= order.user.name %></td>
-    <td><%= order.date %></td>
+    <td><%= order.created_at %></td>
     <td><%= order.total %></td>
     <% if order.pending? %>
       <td class="pending_status" >

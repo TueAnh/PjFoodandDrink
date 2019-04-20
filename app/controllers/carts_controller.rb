@@ -25,7 +25,6 @@ class CartsController < ApplicationController
         format.js
       end
     end
-    p order_item
     order_item.price =  (Product.find_by id: order_item.product_id).price
   end
 
